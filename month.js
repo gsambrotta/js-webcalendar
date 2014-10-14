@@ -59,6 +59,7 @@ Calendar.prototype.createCalendar = function(){
     // *** DEBUGGER *** //
     console.log("firstDay:", wca.firstDay);
     console.log("firstDayOfWeek:", wca.firstDayOfWeek);
+    console.log("currentMonth:", wca.currentMonth);
     console.log("monthName", wca.showMonth);
     console.log("daysLabel", wca.showWeekDay);
     console.log("daysPerMonth", wca.totDayInMonth);
