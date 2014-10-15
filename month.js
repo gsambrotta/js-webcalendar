@@ -32,9 +32,11 @@ Calendar.prototype.createCalendar = function(){
 
     year.innerHTML = '<td>'+ wca.currentYear +'</td>';
     month.innerHTML =  '<td>'+ wca.showMonth +'</td>';
+    var days = '';
     for(i = 0; i < daysLabel.length; i++)
-        daysOfWeek.innerHTML = daysOfWeek.innerHTML + '<td>'+ daysLabel[i] +'</td>';
-    
+         days += '<td>'+ daysLabel[i] +'</td>';
+    daysOfWeek.innerHTML = days;
+
     var html = '';
     var day = 1;
     for(i = 1; i <= 6; i++){ //6 rows
@@ -54,12 +56,11 @@ Calendar.prototype.createCalendar = function(){
         }
         html += '</tr>'; 
     }  
-    Htmltable.innerHTML += html + '</tr>';
+    Htmltable.innerHTML = html + '</tr>';
 
     // *** DEBUGGER *** //
     console.log("firstDay:", wca.firstDay);
     console.log("firstDayOfWeek:", wca.firstDayOfWeek);
-    console.log("currentMonth:", wca.currentMonth);
     console.log("monthName", wca.showMonth);
     console.log("daysLabel", wca.showWeekDay);
     console.log("daysPerMonth", wca.totDayInMonth);
